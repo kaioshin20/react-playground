@@ -8,9 +8,20 @@ const cockpit = props => {
     setTimeout(() => {
       alert('Data saved to cloud sucessfully')
     }, 1000)
+    //gets executed before the above code
+    return () => {
+      console.log("[Cockpit.js] Doing some cleanup work")
+    }
   }, [])
   //second argument of useEffect takes array of elements for which it should execute
   //if empty, only runs once
+
+  useEffect(() => {
+    console.log("[Cockpit.js] 2nd useEffect")
+    return () => {
+      console.log("[Cockpit.js] Doing some cleanup work in 2nd useEffect")
+    }
+  })
 
   let btnClass=''
 
