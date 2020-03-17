@@ -2,6 +2,8 @@ import React from 'react'
 import classes from './Person.css'
 
 const person = (props) => {
+    console.log("[Person.js] rendering...")
+
     return (
         <div className={classes.Person}>
             <p onClick={props.click}>this is {props.name} of {props.age} years old</p>
